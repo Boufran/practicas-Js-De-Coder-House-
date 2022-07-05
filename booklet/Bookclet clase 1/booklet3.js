@@ -3,14 +3,14 @@
 /* Solicitar al usuario un (1) un número y un (1) texto. 
 Efectuar una salida por alerta con el mensaje ingresado por cada repetición, hasta alcanzar el valor señalado por el usuario. */
 
-let numero = prompt("Ingrese un numero")
-let texto = prompt("Ingresar un texto")
+let numero = prompt("Ingrese un numero");
+let texto = prompt("Ingresar un texto");
 
-for(let i = 1; i > 0 ; i++){
-    alert(texto);
-    if(i == numero) {
-        break;
-    }
+for (let i = 0; i < numero; i++) {
+  alert(texto);
+  if (i == numero) {
+    break;
+  }
 }
 
 // ACTIVIDAD 2
@@ -21,12 +21,12 @@ for(let i = 1; i > 0 ; i++){
 
 //  El for es, el primer valor desde cuando  {Seria desde 0 (let i = 0)} , el segundo es hasta cuando {(i > 10 ) hasta menor de 10} y tercero es la actualizacion ( osea de 1 en 1 de 2 en 2 etc.){( i++ seria de 1 en 1)}
 
-let numero2 = prompt('Ingresar un valor');
+let numero2 = prompt("Ingresar un valor");
 for (let i = 0; i < numero2; i++) {
-    if (i > 4) {
-        break;
-    }
-    alert("lado");
+  if (i > 4) {
+    break;
+  }
+  alert("lado");
 }
 
 // ACTIVIDAD 3
@@ -36,15 +36,13 @@ Solicitar al usuario la carga de diez (10) alumnos de forma consecutiva.
 Luego realizar un única salida por alerta, con el listado de alumnos registrados.
 */
 
-
-
 let alumnos = " ";
 for (let i = 0; i < 10; i++) {
-    alumnos += prompt("Ingresar nombre") + "\n";
+  alumnos += prompt("Ingresar nombre") + "\n";
 }
 alert(alumnos);
 
-// \n es un salto de linea . Sino, aparecerian todos los nombres uno al lado del otro. 
+// \n es un salto de linea . Sino, aparecerian todos los nombres uno al lado del otro.
 
 // ACTIVIDAD NUMERO 4
 
@@ -57,9 +55,9 @@ Luego realizar un única salida por alerta, con todos los nombres ingresados.
 
 let harryPotter = prompt("Ingresar personajes de Harry Potter");
 let personajes = " ";
-while(harryPotter != 'Voldemort'){
-    personajes += harryPotter +"\n";
-    harryPotter = prompt("Ingresar personajes de Harry Potter");
+while (harryPotter != "Voldemort") {
+  personajes += harryPotter + "\n";
+  harryPotter = prompt("Ingresar personajes de Harry Potter");
 }
 alert(personajes);
 
@@ -75,24 +73,24 @@ Generar una única salida compuesta por los siguientes productos, según el valo
 
 */
 
-let actv5 =  prompt("Seleccionar un numero del 1 al 4 , ESC para salir");
-while (actv5 != 'ESC') {
-    switch (actv5) {
-        case "1":
-            alert("Tomate");
-            break;
-        case "2":
-            alert("Papa");
-            break;
-        case "3":
-            alert("Carne");
-            break;
-        case "4":
-            alert("Pollo");
-            break;
-        default:
-            alert("Error");
-            break;
-    }
-    actv5 = prompt("Seleccionar un numero del 1 al 4 , ESC para salir");
+let actv5 = prompt("Seleccionar un numero del 1 al 4 , ESC para salir");
+while (actv5 != "ESC") {
+  switch (actv5) {
+    case "1":
+      alert("Tomate");
+      break;
+    case "2":
+      alert("Papa");
+      break;
+    case "3":
+      alert("Carne");
+      break;
+    case "4":
+      alert("Pollo");
+      break;
+    default:
+      alert("Error");
+      break;
+  }
+  actv5 = prompt("Seleccionar un numero del 1 al 4 , ESC para salir");
 }
