@@ -29,22 +29,24 @@
 //     this.cobertura = cobertura;
 // }
 
-// const torta1 = new Torta('Brownie', 'Chocolate', 'Glase');
+// const torta1 = new Torta('Bfilanie', 'Chocolate', 'Glase');
 // const torta2 = new Torta('Vainilla', 'Crema pastelera', 'Frutas');
 
 // console.log(torta1.tipoMasa);
 // console.log(torta2.tipoMasa);
 
 class Vehiculo {
-    constructor(marca, modelo, anio) {
-        this.marca = marca;
-        this.modelo = modelo;
-        this.anio = Number(anio);
-    }
+  constructor(marca, modelo, anio) {
+    this.marca = marca;
+    this.modelo = modelo;
+    this.anio = Number(anio);
+  }
 
-    mostrarAntiguedad() {
-        console.log(`El vehículo ${this.marca} ${this.modelo} tiene ${2022 - this.anio} años.`);
-    }
+  mostrarAntiguedad() {
+    console.log(
+      `El vehículo ${this.marca} ${this.modelo} tiene ${2022 - this.anio} años.`
+    );
+  }
 }
 
 const vehiculo = new Vehiculo("Fiat", "Palio", 2015);

@@ -1,0 +1,141 @@
+:root {
+  --top: 0px;
+  --top325: 325px;
+}
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+body {
+  overflow-x: hidden;
+  display: block;
+}
+ellipse {
+  fill: hsl(0, 0%, 90%);
+  stroke: black;
+  stroke-weight: 1px;
+}
+#volverATirar,
+#reiniciar {
+  margin: 10rem auto;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 0.3rem;
+  display: block;
+  color: black;
+  border: 3px solid black;
+  background-color: yellow;
+}
+#volverATirar:hover,
+#reiniciar:hover {
+  cursor: pointer;
+  background-color: black;
+  color: yellow;
+}
+#tiempo {
+  margin: auto;
+  display: block;
+  text-align: center;
+  font-size: 3rem;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+#tiempo {
+}
+.vasos {
+  margin: auto;
+  width: 310px;
+}
+.vaso {
+  width: 100px;
+  position: relative;
+}
+.fila2 {
+  margin-top: -10rem;
+  margin-left: 50px;
+}
+.fila3 {
+  margin-top: -10rem;
+  margin-left: 100px;
+}
+.vaso4 {
+  top: 5rem;
+}
+.vaso5 {
+  top: 5rem;
+}
+.vaso6 {
+  top: 10rem;
+}
+.pelota {
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+.tirador {
+  position: relative;
+  top: 200px;
+  left: 125px;
+  width: 300px;
+  margin: auto;
+}
+.tiroX {
+  animation: tiroX 1s infinite linear;
+}
+@keyframes tiroX {
+  0% {
+    left: 0px;
+  }
+  25% {
+    left: 125px;
+  }
+  50% {
+    left: 0px;
+  }
+  75% {
+    left: -125px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+.tiroY {
+  animation: tiroY 1s infinite linear;
+}
+@keyframes tiroY {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: 175px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+.desaparecer {
+  animation: desaparecer 1s;
+  opacity: 0;
+}
+@keyframes desaparecer {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.Tiro {
+  animation: Tiro 1s;
+  animation-timing-function: ease;
+}
+@keyframes Tiro {
+  0% {
+    top: var(--top);
+  }
+  100% {
+    top: var(--top325);
+  }
+}

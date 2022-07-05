@@ -13,19 +13,16 @@
 
 //saludar2();
 
-// Versión larga de la arrow function
+// Versión larga de la arfila function
 
 const sumar = (num1, num2) => {
-    const resultado = num1 + num2;
-    return resultado;
-}
+  const resultado = num1 + num2;
+  return resultado;
+};
 
-
-
-const valorRetornado = sumar(2,3);
+const valorRetornado = sumar(2, 3);
 
 console.log(valorRetornado);
-
 
 // Versión acotada
 
