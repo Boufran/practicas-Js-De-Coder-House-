@@ -3,8 +3,8 @@
 /* Solicitar al usuario un (1) un número y un (1) texto. 
 Efectuar una salida por alerta con el mensaje ingresado por cada repetición, hasta alcanzar el valor señalado por el usuario. */
 
-let numero = prompt("Ingrese un numero");
-let texto = prompt("Ingresar un texto");
+let numero = Number(prompt("Ingresar un numero!"));
+let texto = prompt("Ingresar un texto!");
 
 for (let i = 0; i < numero; i++) {
   alert(texto);
@@ -23,7 +23,7 @@ for (let i = 0; i < numero; i++) {
 
 let numero2 = prompt("Ingresar un valor");
 for (let i = 0; i < numero2; i++) {
-  if (i > 4) {
+  if (i > 3) {
     break;
   }
   alert("lado");
@@ -36,13 +36,13 @@ Solicitar al usuario la carga de diez (10) alumnos de forma consecutiva.
 Luego realizar un única salida por alerta, con el listado de alumnos registrados.
 */
 
-let alumnos = " ";
-for (let i = 0; i < 10; i++) {
-  alumnos += prompt("Ingresar nombre") + "\n";
-}
-alert(alumnos);
+// let alumnos = " ";
 
-// \n es un salto de linea . Sino, aparecerian todos los nombres uno al lado del otro.
+// for (i = 0; i < 10; i++) {
+//   alumnos += prompt("Ingrese un Alumno") + "\n";
+// }
+
+// alert(alumnos);
 
 // ACTIVIDAD NUMERO 4
 
@@ -53,11 +53,12 @@ Luego realizar un única salida por alerta, con todos los nombres ingresados.
 
 */
 
-let harryPotter = prompt("Ingresar personajes de Harry Potter");
+let harrypotter = prompt("Ingresar personajes de Harry Potter");
 let personajes = " ";
-while (harryPotter != "Voldemort") {
-  personajes += harryPotter + "\n";
-  harryPotter = prompt("Ingresar personajes de Harry Potter");
+
+while (harrypotter != "Voldemort") {
+  personajes += harrypotter + "\n";
+  harrypotter = prompt("Ingresar personajes de Harry Potter");
 }
 alert(personajes);
 

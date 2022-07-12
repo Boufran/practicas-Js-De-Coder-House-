@@ -58,7 +58,7 @@ function tiroX(valueY) {
       reiniciarBtn.setAttribute("id", "reiniciar");
       document.body.appendChild(reiniciarBtn);
     } else {
-      let volverATirarBtn = document.createElement("BOTOn!");
+      let volverATirarBtn = document.createElement("BOTON!");
       volverATirarBtn.innerHTML = "Volver a Tirar!";
       volverATirarBtn.setAttribute("onclick", "volverATira()");
       volverATirarBtn.setAttribute("id", "volverATirar");
