@@ -49,7 +49,7 @@ while (categoria != "salir" && categoria != null) {
     'Ingrese una categoria para comprar o ingrese "salir": \n(' + aux + ")"
   );
 
-  if (categoria != "salir" && categoria != null) {
+  if ((categoria != "salir" && categoria != null) || categorias == categoria) {
     let productosFiltradoPorCategoria = productos.filter(
       (item) => item.categoria == categoria
     );

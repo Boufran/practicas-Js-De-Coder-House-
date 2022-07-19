@@ -22,23 +22,41 @@ class Tienda {
   estaAbierto(hora) {
     if ((hora >= 8 && hora <= 12) || (hora >= 15 && hora <= 19)) {
       return true;
+    } else {
+      return false;
     }
-    return false;
+  }
+  esPropietario(nombre) {
+    return this.propietario == nombre;
+  }
+  transferirDinero(valor) {
+    if (this.presupuesto > 0 && valor < this.presupuesto) {
+      this.presupuesto -= valor;
+      return valor;
+    } else {
+      return 0;
+    }
   }
 }
-const tienda1 = new Tienda("Kwik-E-Mart ", "Park 123", "Apu", "Almacen");
+const tienda1 = new Tienda(
+  "ABC",
+  "Avenida Santa Fe 1017",
+  "Clau",
+  "Bicicleteria"
+);
 const tienda2 = new Tienda(
-  "Edna's Edibles ",
-  "PEREZ 323",
-  "Edna Krabappel",
-  "Panaderia"
+  "Akira",
+  "Sesquicentenario 123",
+  "Pepe",
+  "Deportivo"
 );
 const tienda3 = new Tienda(
-  "Springfield Mall ",
-  "Hall 231",
-  "Mr. Burns",
-  "Shopping"
+  "Beta",
+  "Avenida Santa Fe 1023",
+  "Viejo pelado",
+  "Consecionaria"
 );
+
 console.log(tienda1);
 console.log(tienda2);
 console.log(tienda3);
@@ -55,30 +73,28 @@ por la información de los objetos instanciados.
 
 */
 
-let ingresados = "";
-for (let index = 0; index < 5; index++) {
-  let tienda = new Tienda(
-    prompt("NOMBRE"),
-    prompt("DIRECCION"),
-    prompt("PROPIETARIO"),
-    prompt("RUBRO")
-  );
-  ingresados +=
-    "Tienda: " +
-    tienda.nombre +
-    " " +
-    "Direccion: " +
-    tienda.direccion +
-    " " +
-    "Propitario: " +
-    tienda.propietario +
-    " " +
-    "rubro: " +
-    tienda.rubro +
-    "\n";
-}
-alert(ingresados);
+// let ingresados = "";
 
+// for (i = 1; i < 3; i++) {
+//   tiendas = new Tienda(
+//     prompt("ingrese nombre de la tienda" + i),
+//     prompt("ingrese direccion de la tienda" + i),
+//     prompt("ingrese propietario de la tienda" + i),
+//     prompt("ingrese rubro de la tienda" + i)
+//   );
+//   ingresados +=
+//     "Nombre: " +
+//     tiendas.nombre +
+//     "Direccion: " +
+//     tiendas.direccion +
+//     "Propietario: " +
+//     tiendas.propietario +
+//     "Rubro: " +
+//     tiendas.rubro +
+//     "\n";
+// }
+
+// console.log(ingresados);
 // ACTIVIDAD 3
 
 /*
@@ -93,16 +109,21 @@ alerta si la tienda está abierta, en función de la hora
 ingresada.
 
 */
+// const tienda4 = new Tienda(
+//   "Fravega",
+//   "Parana 12312",
+//   "Juan",
+//   "Electrodomesticos"
+// );
 
-const tienda4 = new Tienda("33 cents Store", "Cheap 231", "Barato SRL", "Ropa");
-for (let index = 0; index < 3; index++) {
-  let entrada = parseInt(prompt("INGRESAR HORA EN PUNTO"));
-  if (tienda4.estaAbierto(entrada)) {
-    alert("LA TIENDA ESTA ABIERTA A LAS " + entrada);
-  } else {
-    alert("LA TIENDA ESTA CERRADA A LAS " + entrada);
-  }
-}
+// for (i = 0; i < 3; i++) {
+//   let entrada = parseInt(prompt("ingrese un horario"));
+//   if (tienda4.estaAbierto(entrada)) {
+//     alert("Esta abierto a las " + entrada + " hs");
+//   } else {
+//     alert("No esta abierto a las " + entrada + " hs");
+//   }
+// }
 
 // ACTIVIDAD 4
 
@@ -119,31 +140,7 @@ de tienda.
 
 */
 
-class Tienda {
-  constructor(nombre, direccion, propietario, rubro) {
-    this.nombre = nombre;
-    this.direccion = direccion;
-    this.propietario = propietario;
-    this.rubro = rubro;
-  }
-  esPropietario(nombre) {
-    return this.propietario == nombre;
-  }
-}
-const tienda8 = new Tienda("Kwik-E-Mart", "Park 123", "Apu", "Almacen");
-const tienda9 = new Tienda(
-  "Edna's Edibles",
-  "PEREZ 323",
-  "Edna Krabappel",
-  "Panaderia"
-);
-const tienda10 = new Tienda(
-  "Springfield Mall",
-  "Hall 231",
-  "Mr. Burns",
-  "Shopping"
-);
-for (let index = 0; index < 5; index++) {
+for (let index = 0; index < 3; index++) {
   let entrada = prompt("INGRESAR NOMBRE DE PROPITARIO");
   if (tienda1.esPropietario(entrada)) {
     alert(entrada + " ES PROPIETARIO DE LA TIENDA " + tienda1.nombre);
@@ -175,22 +172,6 @@ ingresado.
 
 */
 
-class Cliente {
-  constructor(nombre, presupuesto, tarjeta, telefono) {
-    this.nombre = nombre;
-    this.presupuesto = parseFloat(presupuesto);
-    this.tarjeta = tarjeta;
-    this.telefono = telefono;
-  }
-  transferirDinero(valor) {
-    if (this.presupuesto > 0 && valor < this.presupuesto) {
-      this.presupuesto -= valor;
-      return valor;
-    } else {
-      return 0;
-    }
-  }
-}
 const cliente1 = new Cliente("Homero", 2000, true, "1234560");
 const cliente2 = new Cliente("Carlos", "1000", false, "21234560");
 const cliente3 = new Cliente("Barny", "50", false, "231234560");

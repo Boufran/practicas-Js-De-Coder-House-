@@ -11,34 +11,19 @@ Luego, invocar las tres funciones.
 */
 
 // function entrada() {
-//   return prompt("INGRESAR DATO");
+//   x = parseFloat(prompt("Ingrese un valor"));
+//   return x;
 // }
-
 // function procesamiento(valor) {
-//   return "LA ENTRADA ES " + valor;
+//   return "Usted ingreso " + valor;
 // }
-
-// function salida(valor) {
-//   alert(valor);
-// }
-
-// //SUMAR LA OTRA FORMA DE LLAMADA
-// salida(procesamiento(entrada()));
-
-// function entrada() {
-//   return prompt("Ingrese un Valor!");
-// }
-
-// function procesamiento(valor) {
-//   return "La entrada es " + valor;
-// }
-
 // function salida(valor) {
 //   alert(valor);
 // }
 
 // salida(procesamiento(entrada()));
-// // ACTIVIDAD 2
+
+// ACTIVIDAD 2
 
 //
 
@@ -54,9 +39,9 @@ Luego invocar la función de forma iterativa cinco (5) veces, solicitando en cad
 //   return Math.round(valor);
 // }
 
-// for (let i = 0; i < 5; i++) {
-//   let entrada = prompt("INGRESAR NUMERO");
-//   alert(redondeo(entrada));
+// for (i = 0; i < 5; i++) {
+//   x = redondeo(prompt("Ingrese un numero"));
+//   console.log(x);
 // }
 
 // ACTIVIDAD 3
@@ -74,24 +59,12 @@ Luego invocar la función de forma iterativa cinco (5) veces, solicitando en cad
 //   return precio + (precio * porcentaje) / 100;
 // }
 
-// for (i = 0; i < 2; i++) {
-//   let resultado = impuesto(
-//     Number(prompt("ingrese un precio")),
-//     Number(prompt("ingrse un porcentaje"))
+// for (i = 0; i < 5; i++) {
+//   x = impuesto(
+//     parseFloat(prompt("ingrese un precio")),
+//     parseFloat(prompt("ingrese un porcentaje %"))
 //   );
-//   console.log(resultado);
-// }
-
-// function impuesto(precio, porcentaje) {
-//   return precio + (precio * porcentaje) / 100;
-// }
-
-// for (let index = 0; index < 2; index++) {
-//   let resultado = impuesto(
-//     parseFloat(prompt("INGRESAR PRECIO")),
-//     parseFloat(prompt("INGRESAR %"))
-//   );
-//   alert(resultado);
+//   console.log(x);
 // }
 
 // ACTIVIDAD 4
@@ -105,50 +78,30 @@ Luego invocar las funciones solicitando  al usuario el valor y el tipo de cotiza
 
 
 */
+// const valordolar = 250;
 
-// function compraDolar(pesos, dolar) {
-//   return pesos / dolar;
+// function cotizarDolar(pesos) {
+//   return pesos * valordolar;
 // }
 
-// function venderDolar(dolar, pesos) {
-//   return pesos * dolar;
+// let y;
+// x = cotizarDolar(
+//   (y = prompt("ingrese Cantidad de dolares que quiere comprar"))
+// );
+// console.log("Usted va a vender $ " + x + " y recibira " + y + " U$D");
+
+// function cotizarPesos(pesos) {
+//   return valordolar * pesos;
 // }
 
-// console.log(
-//   "USTED RECIBIRA u$D " +
-//     compraDolar(
-//       prompt("Ingrese Cantidad de pesos"),
-//       prompt("ingresar valor dolar")
-//     )
+// let b;
+
+// z = cotizarPesos(
+//   (b = prompt("Ingrese cantidad de dolares que quiere comprar"))
 // );
 
-// console.log(
-//   "USTED RECIBIRA $" +
-//     venderDolar(
-//       parseFloat(prompt("Ingrese valor Dolar!")),
-//       parseFloat(prompt("Ingrese cantida de Dolares a vender"))
-//     )
-// );
-
-const COTIZACION_DOLAR = 250;
-const cotizarDolar = (pesos) => pesos / COTIZACION_DOLAR;
-const cotizarPesos = (dolar) => dolar * COTIZACION_DOLAR;
-let seleccion = prompt(
-  "SELECCIONAR COTIZACION \n 1 - DOLARES A PESOS \n 2 - PESOS A DOLAR "
-);
-let valor = prompt("VALOR");
-switch (seleccion) {
-  case "1":
-    alert(cotizarPesos(valor));
-    break;
-  case "2":
-    alert(cotizarDolar(valor));
-    break;
-  default:
-    break;
-}
-
-// ACTIVIDAD 5
+// console.log("Usted debe abonar $ " + z + " y recibira U$D " + b);
+// // ACTIVIDAD 5
 
 /*
 
@@ -156,6 +109,17 @@ Codificar una función con la siguiente cabecera: validacion(cadena). En ella, s
 Caso contrario, se retorna false. Luego invocar la función de forma iterativa, hasta que el usuario tipee “ESC”, solicitando en cada ciclo una cadena a validar.
 
 */
+
+// function validacion(cadena) {
+//   return cadena != "";
+// }
+
+// let entrada = prompt("Ingrese un texto");
+
+// while (entrada != "ESC") {
+//   alert(validacion(entrada));
+//   entrada = prompt("Ingrese un texto");
+// }
 
 function validacion(cadena) {
   return cadena != "";
